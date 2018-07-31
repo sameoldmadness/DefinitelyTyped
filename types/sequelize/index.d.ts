@@ -4982,6 +4982,13 @@ declare namespace sequelize {
          * A hash of attributes to limit your index(Filtered Indexes - MSSQL & PostgreSQL only)
          */
         where?: AnyWhereOptions;
+
+        /**
+         * PostgreSQL will build the index without taking any write locks. Postgres only
+         *
+         * Defaults to false
+         */
+        concurrently?: boolean;
     }
 
     /**
